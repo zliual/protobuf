@@ -2,6 +2,6 @@ message Student
 {
 	required string id = 1;
 	required string name = 2;
-	required int32  age = 3;
+    required int32  age = 3;
 
 }

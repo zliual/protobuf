@@ -25,7 +25,6 @@ int main(int argc, char** argv){
 	std::string msg;
 	std::ifstream in("out.txt", std::ofstream::binary);
 	in >> msg;
-	in.close();
 
 	if(stu_in.ParseFromIstream(&in)){
 		std::cout<<"good!"<<std::endl;
@@ -37,7 +36,7 @@ int main(int argc, char** argv){
 		std::cout<<"id: "<< stu_in.id() <<", name: " << stu_in.name() <<", age: "<< stu_in.age() <<std::endl;
 	}
 	*/
-
+	in.close();
 	google::protobuf::ShutdownProtobufLibrary();
 
 	return 1;
